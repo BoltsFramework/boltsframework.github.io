@@ -1,0 +1,1237 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>BFTask Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.1 (build 858)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">Bolts </a></h1>
+				<a id="developerHome" href="../index.html">Parse Inc.</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">BFTask Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	
+	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/cancelledTask">&nbsp;&nbsp;&nbsp;&nbsp;+ cancelledTask</option>
+	
+	<option value="//api/name/taskForCompletionOfAllTasks:">&nbsp;&nbsp;&nbsp;&nbsp;+ taskForCompletionOfAllTasks:</option>
+	
+	<option value="//api/name/taskWithDelay:">&nbsp;&nbsp;&nbsp;&nbsp;+ taskWithDelay:</option>
+	
+	<option value="//api/name/taskWithError:">&nbsp;&nbsp;&nbsp;&nbsp;+ taskWithError:</option>
+	
+	<option value="//api/name/taskWithException:">&nbsp;&nbsp;&nbsp;&nbsp;+ taskWithException:</option>
+	
+	<option value="//api/name/taskWithResult:">&nbsp;&nbsp;&nbsp;&nbsp;+ taskWithResult:</option>
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/continueWithBlock:">&nbsp;&nbsp;&nbsp;&nbsp;- continueWithBlock:</option>
+	
+	<option value="//api/name/continueWithExecutor:withBlock:">&nbsp;&nbsp;&nbsp;&nbsp;- continueWithExecutor:withBlock:</option>
+	
+	<option value="//api/name/continueWithExecutor:withSuccessBlock:">&nbsp;&nbsp;&nbsp;&nbsp;- continueWithExecutor:withSuccessBlock:</option>
+	
+	<option value="//api/name/continueWithSuccessBlock:">&nbsp;&nbsp;&nbsp;&nbsp;- continueWithSuccessBlock:</option>
+	
+	<option value="//api/name/error">&nbsp;&nbsp;&nbsp;&nbsp;- error</option>
+	
+	<option value="//api/name/exception">&nbsp;&nbsp;&nbsp;&nbsp;- exception</option>
+	
+	<option value="//api/name/isCancelled">&nbsp;&nbsp;&nbsp;&nbsp;- isCancelled</option>
+	
+	<option value="//api/name/isCompleted">&nbsp;&nbsp;&nbsp;&nbsp;- isCompleted</option>
+	
+	<option value="//api/name/result">&nbsp;&nbsp;&nbsp;&nbsp;- result</option>
+	
+	<option value="//api/name/waitUntilFinished">&nbsp;&nbsp;&nbsp;&nbsp;- waitUntilFinished</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/cancelledTask">cancelledTask</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/taskForCompletionOfAllTasks:">taskForCompletionOfAllTasks:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/taskWithDelay:">taskWithDelay:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/taskWithError:">taskWithError:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/taskWithException:">taskWithException:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/taskWithResult:">taskWithResult:</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/continueWithBlock:">continueWithBlock:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/continueWithExecutor:withBlock:">continueWithExecutor:withBlock:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/continueWithExecutor:withSuccessBlock:">continueWithExecutor:withSuccessBlock:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/continueWithSuccessBlock:">continueWithSuccessBlock:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/error">error</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/exception">exception</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isCancelled">isCancelled</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isCompleted">isCompleted</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/result">result</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/waitUntilFinished">waitUntilFinished</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="BFTask Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">BFTask Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">BFTask.h</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>The consumer view of a Task. A BFTask has methods to<br/>
+inspect the state of the task, and to add continuations to<br/>
+be run once the task is complete.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/taskWithResult:">+&nbsp;taskWithResult:</a></code>
+		<span class="tooltip"><p>Creates a task that is already completed with the given result.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/taskWithError:">+&nbsp;taskWithError:</a></code>
+		<span class="tooltip"><p>Creates a task that is already completed with the given error.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/taskWithException:">+&nbsp;taskWithException:</a></code>
+		<span class="tooltip"><p>Creates a task that is already completed with the given exception.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/cancelledTask">+&nbsp;cancelledTask</a></code>
+		<span class="tooltip"><p>Creates a task that is already cancelled.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/taskForCompletionOfAllTasks:">+&nbsp;taskForCompletionOfAllTasks:</a></code>
+		<span class="tooltip"><p>Returns a task that will be completed (with result == nil) once<br/>
+all of the input tasks have completed.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/taskWithDelay:">+&nbsp;taskWithDelay:</a></code>
+		<span class="tooltip"><p>Returns a task that will be completed a certain amount of time in the future.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/result">&ndash;&nbsp;result</a></code>
+		<span class="tooltip"><p>The result of a successful task.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/error">&ndash;&nbsp;error</a></code>
+		<span class="tooltip"><p>The error of a failed task.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/exception">&ndash;&nbsp;exception</a></code>
+		<span class="tooltip"><p>The exception of a failed task.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/isCancelled">&ndash;&nbsp;isCancelled</a></code>
+		<span class="tooltip"><p>Whether this task has been cancelled.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/isCompleted">&ndash;&nbsp;isCompleted</a></code>
+		<span class="tooltip"><p>Whether this task has completed.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/continueWithBlock:">&ndash;&nbsp;continueWithBlock:</a></code>
+		<span class="tooltip"><p>Enqueues the given block to be run once this task is complete.<br/>
+This method uses a default execution strategy. The block will be<br/>
+run on the thread where the previous task completes, unless the<br/>
+the stack depth is too deep, in which case it will be run on a<br/>
+dispatch queue with default priority.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/continueWithExecutor:withBlock:">&ndash;&nbsp;continueWithExecutor:withBlock:</a></code>
+		<span class="tooltip"><p>Enqueues the given block to be run once this task is complete.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/continueWithSuccessBlock:">&ndash;&nbsp;continueWithSuccessBlock:</a></code>
+		<span class="tooltip"><p>Identical to continueWithBlock:, except that the block is only run<br/>
+if this task did not produce a cancellation, error, or exception.<br/>
+If it did, then the failure will be propagated to the returned<br/>
+task.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/continueWithExecutor:withSuccessBlock:">&ndash;&nbsp;continueWithExecutor:withSuccessBlock:</a></code>
+		<span class="tooltip"><p>Identical to continueWithExecutor:withBlock:, except that the block<br/>
+is only run if this task did not produce a cancellation, error, or<br/>
+exception. If it did, then the failure will be propagated to the<br/>
+returned task.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/waitUntilFinished">&ndash;&nbsp;waitUntilFinished</a></code>
+		<span class="tooltip"><p>Waits until this operation is completed.<br/>
+This method is inefficient and consumes a thread resource while<br/>
+it&rsquo;s running. It should be avoided. This method logs a warning<br/>
+message if it is used on the main thread.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/cancelledTask" title="cancelledTask"></a>
+	<h3 class="subsubtitle method-title">cancelledTask</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a task that is already cancelled.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (BFTask *)cancelledTask</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Creates a task that is already cancelled.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">BFTask.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/taskForCompletionOfAllTasks:" title="taskForCompletionOfAllTasks:"></a>
+	<h3 class="subsubtitle method-title">taskForCompletionOfAllTasks:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a task that will be completed (with result == nil) once<br/>
+all of the input tasks have completed.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (BFTask *)taskForCompletionOfAllTasks:(NSArray *)<em>tasks</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns a task that will be completed (with result == nil) once<br/>
+all of the input tasks have completed.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">BFTask.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/taskWithDelay:" title="taskWithDelay:"></a>
+	<h3 class="subsubtitle method-title">taskWithDelay:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a task that will be completed a certain amount of time in the future.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (BFTask *)taskWithDelay:(int)<em>millis</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>millis</em></dt>
+			<dd><p>The approximate number of milliseconds to wait before the<br/>
+task will be finished (with result == nil).</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns a task that will be completed a certain amount of time in the future.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">BFTask.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/taskWithError:" title="taskWithError:"></a>
+	<h3 class="subsubtitle method-title">taskWithError:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a task that is already completed with the given error.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (BFTask *)taskWithError:(NSError *)<em>error</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Creates a task that is already completed with the given error.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">BFTask.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/taskWithException:" title="taskWithException:"></a>
+	<h3 class="subsubtitle method-title">taskWithException:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a task that is already completed with the given exception.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (BFTask *)taskWithException:(NSException *)<em>exception</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Creates a task that is already completed with the given exception.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">BFTask.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/taskWithResult:" title="taskWithResult:"></a>
+	<h3 class="subsubtitle method-title">taskWithResult:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a task that is already completed with the given result.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (BFTask *)taskWithResult:(id)<em>result</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Creates a task that is already completed with the given result.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">BFTask.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/continueWithBlock:" title="continueWithBlock:"></a>
+	<h3 class="subsubtitle method-title">continueWithBlock:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Enqueues the given block to be run once this task is complete.<br/>
+This method uses a default execution strategy. The block will be<br/>
+run on the thread where the previous task completes, unless the<br/>
+the stack depth is too deep, in which case it will be run on a<br/>
+dispatch queue with default priority.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (BFTask *)continueWithBlock:(BFContinuationBlock)<em>block</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>block</em></dt>
+			<dd><p>The block to be run once this task is complete.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A task that will be completed after block has run.<br/>
+If block returns a BFTask, then the task returned from<br/>
+this method will not be completed until that task is completed.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Enqueues the given block to be run once this task is complete.<br/>
+This method uses a default execution strategy. The block will be<br/>
+run on the thread where the previous task completes, unless the<br/>
+the stack depth is too deep, in which case it will be run on a<br/>
+dispatch queue with default priority.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">BFTask.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/continueWithExecutor:withBlock:" title="continueWithExecutor:withBlock:"></a>
+	<h3 class="subsubtitle method-title">continueWithExecutor:withBlock:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Enqueues the given block to be run once this task is complete.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (BFTask *)continueWithExecutor:(BFExecutor *)<em>executor</em> withBlock:(BFContinuationBlock)<em>block</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>executor</em></dt>
+			<dd><p>A BFExecutor responsible for determining how the<br/>
+continuation block will be run.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>block</em></dt>
+			<dd><p>The block to be run once this task is complete.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A task that will be completed after block has run.<br/>
+If block returns a BFTask, then the task returned from<br/>
+this method will not be completed until that task is completed.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Enqueues the given block to be run once this task is complete.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">BFTask.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/continueWithExecutor:withSuccessBlock:" title="continueWithExecutor:withSuccessBlock:"></a>
+	<h3 class="subsubtitle method-title">continueWithExecutor:withSuccessBlock:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Identical to continueWithExecutor:withBlock:, except that the block<br/>
+is only run if this task did not produce a cancellation, error, or<br/>
+exception. If it did, then the failure will be propagated to the<br/>
+returned task.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (BFTask *)continueWithExecutor:(BFExecutor *)<em>executor</em> withSuccessBlock:(BFContinuationBlock)<em>block</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>executor</em></dt>
+			<dd><p>A BFExecutor responsible for determining how the<br/>
+continuation block will be run.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>block</em></dt>
+			<dd><p>The block to be run once this task is complete.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A task that will be completed after block has run.<br/>
+If block returns a BFTask, then the task returned from<br/>
+this method will not be completed until that task is completed.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Identical to continueWithExecutor:withBlock:, except that the block<br/>
+is only run if this task did not produce a cancellation, error, or<br/>
+exception. If it did, then the failure will be propagated to the<br/>
+returned task.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">BFTask.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/continueWithSuccessBlock:" title="continueWithSuccessBlock:"></a>
+	<h3 class="subsubtitle method-title">continueWithSuccessBlock:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Identical to continueWithBlock:, except that the block is only run<br/>
+if this task did not produce a cancellation, error, or exception.<br/>
+If it did, then the failure will be propagated to the returned<br/>
+task.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (BFTask *)continueWithSuccessBlock:(BFContinuationBlock)<em>block</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>block</em></dt>
+			<dd><p>The block to be run once this task is complete.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A task that will be completed after block has run.<br/>
+If block returns a BFTask, then the task returned from<br/>
+this method will not be completed until that task is completed.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Identical to continueWithBlock:, except that the block is only run<br/>
+if this task did not produce a cancellation, error, or exception.<br/>
+If it did, then the failure will be propagated to the returned<br/>
+task.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">BFTask.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/error" title="error"></a>
+	<h3 class="subsubtitle method-title">error</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The error of a failed task.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSError *)error</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The error of a failed task.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">BFTask.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/exception" title="exception"></a>
+	<h3 class="subsubtitle method-title">exception</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The exception of a failed task.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSException *)exception</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The exception of a failed task.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">BFTask.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/isCancelled" title="isCancelled"></a>
+	<h3 class="subsubtitle method-title">isCancelled</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Whether this task has been cancelled.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)isCancelled</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Whether this task has been cancelled.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">BFTask.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/isCompleted" title="isCompleted"></a>
+	<h3 class="subsubtitle method-title">isCompleted</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Whether this task has completed.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)isCompleted</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Whether this task has completed.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">BFTask.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/result" title="result"></a>
+	<h3 class="subsubtitle method-title">result</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The result of a successful task.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (id)result</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The result of a successful task.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">BFTask.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/waitUntilFinished" title="waitUntilFinished"></a>
+	<h3 class="subsubtitle method-title">waitUntilFinished</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Waits until this operation is completed.<br/>
+This method is inefficient and consumes a thread resource while<br/>
+it&rsquo;s running. It should be avoided. This method logs a warning<br/>
+message if it is used on the main thread.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)waitUntilFinished</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Waits until this operation is completed.<br/>
+This method is inefficient and consumes a thread resource while<br/>
+it&rsquo;s running. It should be avoided. This method logs a warning<br/>
+message if it is used on the main thread.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">BFTask.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2014 Parse Inc.. All rights reserved. (Last updated: 2014-01-28)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>
