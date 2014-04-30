@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>Bolts Class Reference</title>
+		<title>BFAppLink Class Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
@@ -16,7 +16,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">Bolts Class Reference</h1>
+				<h1 class="hideInXcode">BFAppLink Class Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -37,11 +37,20 @@
 	
 	
 	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/sourceURL">&nbsp;&nbsp;&nbsp;&nbsp;sourceURL</option>
+	
+	<option value="//api/name/targets">&nbsp;&nbsp;&nbsp;&nbsp;targets</option>
+	
+	<option value="//api/name/webURL">&nbsp;&nbsp;&nbsp;&nbsp;webURL</option>
+	
+	
 	
 	
 	<option value="class_methods">Class Methods</option>
 	
-	<option value="//api/name/version">&nbsp;&nbsp;&nbsp;&nbsp;+ version</option>
+	<option value="//api/name/appLinkWithSourceURL:targets:webURL:">&nbsp;&nbsp;&nbsp;&nbsp;+ appLinkWithSourceURL:targets:webURL:</option>
 	
 	
 	
@@ -67,11 +76,21 @@
 
 
 
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sourceURL">sourceURL</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/targets">targets</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/webURL">webURL</a></span></li>
+	
+</ul></li>
+
 
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/version">version</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/appLinkWithSourceURL:targets:webURL:">appLinkWithSourceURL:targets:webURL:</a></span></li>
 	
 </ul></li>
 
@@ -82,7 +101,7 @@
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="Bolts Class Reference" name="top"></a>
+				<a title="BFAppLink Class Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -91,7 +110,7 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">Bolts Class Reference</h1>
+						<h1 class="title title-header">BFAppLink Class Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
@@ -102,12 +121,19 @@
 	<td class="specification-value">NSObject</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">Bolts.h</td>
+	<td class="specification-value">BFAppLink.h</td>
 </tr>
 						</tbody></table></div>
 					
                     
                     
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Contains App Link metadata relevant for navigation on this device
+derived from the HTML at a given URL.</p>
+					</div>
 					
 					
 					
@@ -124,9 +150,27 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/version">+&nbsp;version</a></code>
+		<code><a href="#//api/name/appLinkWithSourceURL:targets:webURL:">+&nbsp;appLinkWithSourceURL:targets:webURL:</a></code>
 	</span>
 	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sourceURL">&nbsp;&nbsp;sourceURL</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/targets">&nbsp;&nbsp;targets</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/webURL">&nbsp;&nbsp;webURL</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
 	
 </li>
 						</ul>
@@ -137,25 +181,23 @@
 					
 					
 					
-					
-					
 					<div class="section section-methods">
-						<a title="Class Methods" name="class_methods"></a>
-						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/version" title="version"></a>
-	<h3 class="subsubtitle method-title">version</h3>
+	<a name="//api/name/sourceURL" title="sourceURL"></a>
+	<h3 class="subsubtitle method-title">sourceURL</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Returns the version of the Bolts Framework as an NSString.</p>
+		<p>The URL from which this BFAppLink was derived</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (NSString *)version</code></div>
+	<div class="method-subsection method-declaration"><code>@property (copy, readonly) NSURL *sourceURL</code></div>
 
     
 	
@@ -167,7 +209,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Returns the version of the Bolts Framework as an NSString.</p>
+		<p>The URL from which this BFAppLink was derived</p>
 	</div>
 	
 	
@@ -178,7 +220,164 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">Bolts.h</code><br />
+		<code class="declared-in-ref">BFAppLink.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/targets" title="targets"></a>
+	<h3 class="subsubtitle method-title">targets</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The ordered list of targets applicable to this platform that will be used
+for navigation.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (strong, readonly) NSArray *targets</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The ordered list of targets applicable to this platform that will be used
+for navigation.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">BFAppLink.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/webURL" title="webURL"></a>
+	<h3 class="subsubtitle method-title">webURL</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The fallback web URL to use if no targets are installed on this device.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (copy, readonly) NSURL *webURL</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The fallback web URL to use if no targets are installed on this device.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">BFAppLink.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/appLinkWithSourceURL:targets:webURL:" title="appLinkWithSourceURL:targets:webURL:"></a>
+	<h3 class="subsubtitle method-title">appLinkWithSourceURL:targets:webURL:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a BFAppLink with the given list of BFAppLinkTargets and target URL.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (instancetype)appLinkWithSourceURL:(NSURL *)<em>sourceURL</em> targets:(NSArray *)<em>targets</em> webURL:(NSURL *)<em>webURL</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>sourceURL</em></dt>
+			<dd><p>the URL from which this App Link is derived</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>targets</em></dt>
+			<dd><p>an ordered list of BFAppLinkTargets for this platform derived
+from App Link metadata.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>webURL</em></dt>
+			<dd><p>the fallback web URL, if any, for the app link.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Creates a BFAppLink with the given list of BFAppLinkTargets and target URL.</p>
+
+<p>Generally, this will only be used by implementers of the BFAppLinkResolving protocol,
+as these implementers will produce App Link metadata for a given URL.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">BFAppLink.h</code><br />
 	</div>				
 	
 	

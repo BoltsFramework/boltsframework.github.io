@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>Bolts Class Reference</title>
+		<title>BFAppLinkResolving Protocol Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
@@ -16,7 +16,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">Bolts Class Reference</h1>
+				<h1 class="hideInXcode">BFAppLinkResolving Protocol Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -39,11 +39,11 @@
 	
 	
 	
-	<option value="class_methods">Class Methods</option>
-	
-	<option value="//api/name/version">&nbsp;&nbsp;&nbsp;&nbsp;+ version</option>
 	
 	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/appLinkFromURLInBackground:">&nbsp;&nbsp;&nbsp;&nbsp;- appLinkFromURLInBackground:</option>
 	
 	
 	
@@ -69,20 +69,20 @@
 
 
 
-<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/version">version</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/appLinkFromURLInBackground:">appLinkFromURLInBackground:</a></span></li>
 	
 </ul></li>
-
-
 
 
 			</ul>
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="Bolts Class Reference" name="top"></a>
+				<a title="BFAppLinkResolving Protocol Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -91,23 +91,31 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">Bolts Class Reference</h1>
+						<h1 class="title title-header">BFAppLinkResolving Protocol Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
-	<td class="specification-title">Inherits from</td>
+	<td class="specification-title">Conforms to</td>
 	<td class="specification-value">NSObject</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">Bolts.h</td>
+	<td class="specification-value">BFAppLinkResolving.h</td>
 </tr>
 						</tbody></table></div>
 					
                     
                     
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Implement this protocol to provide an alternate strategy for resolving
+App Links that may include pre-fetching, caching, or querying for App Link
+data from an index provided by a service provider.</p>
+					</div>
 					
 					
 					
@@ -124,10 +132,10 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/version">+&nbsp;version</a></code>
+		<code><a href="#//api/name/appLinkFromURLInBackground:">&ndash;&nbsp;appLinkFromURLInBackground:</a></code>
 	</span>
 	
-	
+	<span class="task-item-suffix">required method</span>
 </li>
 						</ul>
 						
@@ -139,27 +147,44 @@
 					
 					
 					
+					
+					
 					<div class="section section-methods">
-						<a title="Class Methods" name="class_methods"></a>
-						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/version" title="version"></a>
-	<h3 class="subsubtitle method-title">version</h3>
+	<a name="//api/name/appLinkFromURLInBackground:" title="appLinkFromURLInBackground:"></a>
+	<h3 class="subsubtitle method-title">appLinkFromURLInBackground:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Returns the version of the Bolts Framework as an NSString.</p>
+		<p>Asynchronously resolves App Link data for a given URL.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (NSString *)version</code></div>
+	<div class="method-subsection method-declaration"><code>- (BFTask *)appLinkFromURLInBackground:(NSURL *)<em>url</em></code></div>
 
     
 	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>url</em></dt>
+			<dd><p>The URL to resolve into an App Link.</p></dd>
+		</dl>
+		
+	</div>
 	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A BFTask that will return a BFAppLink for the given URL.</p>
+	</div>
 	
 	
 	
@@ -167,7 +192,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Returns the version of the Bolts Framework as an NSString.</p>
+		<p>Asynchronously resolves App Link data for a given URL.</p>
 	</div>
 	
 	
@@ -178,15 +203,13 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">Bolts.h</code><br />
+		<code class="declared-in-ref">BFAppLinkResolving.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 					</div>
-					
-					
 					
 					
                     

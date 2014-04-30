@@ -6,7 +6,7 @@
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
-		<meta name="generator" content="appledoc 2.1 (build 858)" />
+		<meta name="generator" content="appledoc 2.2 (build 961)" />
 	</head>
 	<body>
 		<header id="top_header">
@@ -173,14 +173,14 @@
 </tr>
 						</tbody></table></div>
 					
-					
-					
+                    
+                    
 					
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>The consumer view of a Task. A BFTask has methods to<br/>
-inspect the state of the task, and to add continuations to<br/>
+						<p>The consumer view of a Task. A BFTask has methods to
+inspect the state of the task, and to add continuations to
 be run once the task is complete.</p>
 					</div>
 					
@@ -200,126 +200,96 @@ be run once the task is complete.</p>
 							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/taskWithResult:">+&nbsp;taskWithResult:</a></code>
-		<span class="tooltip"><p>Creates a task that is already completed with the given result.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/taskWithError:">+&nbsp;taskWithError:</a></code>
-		<span class="tooltip"><p>Creates a task that is already completed with the given error.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/taskWithException:">+&nbsp;taskWithException:</a></code>
-		<span class="tooltip"><p>Creates a task that is already completed with the given exception.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/cancelledTask">+&nbsp;cancelledTask</a></code>
-		<span class="tooltip"><p>Creates a task that is already cancelled.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/taskForCompletionOfAllTasks:">+&nbsp;taskForCompletionOfAllTasks:</a></code>
-		<span class="tooltip"><p>Returns a task that will be completed (with result == nil) once<br/>
-all of the input tasks have completed.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/taskWithDelay:">+&nbsp;taskWithDelay:</a></code>
-		<span class="tooltip"><p>Returns a task that will be completed a certain amount of time in the future.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/result">&ndash;&nbsp;result</a></code>
-		<span class="tooltip"><p>The result of a successful task.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/error">&ndash;&nbsp;error</a></code>
-		<span class="tooltip"><p>The error of a failed task.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/exception">&ndash;&nbsp;exception</a></code>
-		<span class="tooltip"><p>The exception of a failed task.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/isCancelled">&ndash;&nbsp;isCancelled</a></code>
-		<span class="tooltip"><p>Whether this task has been cancelled.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/isCompleted">&ndash;&nbsp;isCompleted</a></code>
-		<span class="tooltip"><p>Whether this task has completed.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/continueWithBlock:">&ndash;&nbsp;continueWithBlock:</a></code>
-		<span class="tooltip"><p>Enqueues the given block to be run once this task is complete.<br/>
-This method uses a default execution strategy. The block will be<br/>
-run on the thread where the previous task completes, unless the<br/>
-the stack depth is too deep, in which case it will be run on a<br/>
-dispatch queue with default priority.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/continueWithExecutor:withBlock:">&ndash;&nbsp;continueWithExecutor:withBlock:</a></code>
-		<span class="tooltip"><p>Enqueues the given block to be run once this task is complete.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/continueWithSuccessBlock:">&ndash;&nbsp;continueWithSuccessBlock:</a></code>
-		<span class="tooltip"><p>Identical to continueWithBlock:, except that the block is only run<br/>
-if this task did not produce a cancellation, error, or exception.<br/>
-If it did, then the failure will be propagated to the returned<br/>
-task.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/continueWithExecutor:withSuccessBlock:">&ndash;&nbsp;continueWithExecutor:withSuccessBlock:</a></code>
-		<span class="tooltip"><p>Identical to continueWithExecutor:withBlock:, except that the block<br/>
-is only run if this task did not produce a cancellation, error, or<br/>
-exception. If it did, then the failure will be propagated to the<br/>
-returned task.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/waitUntilFinished">&ndash;&nbsp;waitUntilFinished</a></code>
-		<span class="tooltip"><p>Waits until this operation is completed.<br/>
-This method is inefficient and consumes a thread resource while<br/>
-it&rsquo;s running. It should be avoided. This method logs a warning<br/>
-message if it is used on the main thread.</p></span>
 	</span>
 	
 	
@@ -350,7 +320,7 @@ message if it is used on the main thread.</p></span>
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (BFTask *)cancelledTask</code></div>
+	<div class="method-subsection method-declaration"><code>+ (instancetype)cancelledTask</code></div>
 
     
 	
@@ -386,13 +356,13 @@ message if it is used on the main thread.</p></span>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Returns a task that will be completed (with result == nil) once<br/>
+		<p>Returns a task that will be completed (with result == nil) once
 all of the input tasks have completed.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (BFTask *)taskForCompletionOfAllTasks:(NSArray *)<em>tasks</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (instancetype)taskForCompletionOfAllTasks:(NSArray *)<em>tasks</em></code></div>
 
     
 	
@@ -404,7 +374,7 @@ all of the input tasks have completed.</p>
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Returns a task that will be completed (with result == nil) once<br/>
+		<p>Returns a task that will be completed (with result == nil) once
 all of the input tasks have completed.</p>
 	</div>
 	
@@ -434,7 +404,7 @@ all of the input tasks have completed.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (BFTask *)taskWithDelay:(int)<em>millis</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (instancetype)taskWithDelay:(int)<em>millis</em></code></div>
 
     
 	
@@ -443,7 +413,7 @@ all of the input tasks have completed.</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>millis</em></dt>
-			<dd><p>The approximate number of milliseconds to wait before the<br/>
+			<dd><p>The approximate number of milliseconds to wait before the
 task will be finished (with result == nil).</p></dd>
 		</dl>
 		
@@ -486,7 +456,7 @@ task will be finished (with result == nil).</p></dd>
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (BFTask *)taskWithError:(NSError *)<em>error</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (instancetype)taskWithError:(NSError *)<em>error</em></code></div>
 
     
 	
@@ -527,7 +497,7 @@ task will be finished (with result == nil).</p></dd>
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (BFTask *)taskWithException:(NSException *)<em>exception</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (instancetype)taskWithException:(NSException *)<em>exception</em></code></div>
 
     
 	
@@ -568,7 +538,7 @@ task will be finished (with result == nil).</p></dd>
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (BFTask *)taskWithResult:(id)<em>result</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (instancetype)taskWithResult:(id)<em>result</em></code></div>
 
     
 	
@@ -612,16 +582,16 @@ task will be finished (with result == nil).</p></dd>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Enqueues the given block to be run once this task is complete.<br/>
-This method uses a default execution strategy. The block will be<br/>
-run on the thread where the previous task completes, unless the<br/>
-the stack depth is too deep, in which case it will be run on a<br/>
+		<p>Enqueues the given block to be run once this task is complete.
+This method uses a default execution strategy. The block will be
+run on the thread where the previous task completes, unless the
+the stack depth is too deep, in which case it will be run on a
 dispatch queue with default priority.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (BFTask *)continueWithBlock:(BFContinuationBlock)<em>block</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (instancetype)continueWithBlock:(BFContinuationBlock)<em>block</em></code></div>
 
     
 	
@@ -639,8 +609,8 @@ dispatch queue with default priority.</p>
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>A task that will be completed after block has run.<br/>
-If block returns a BFTask, then the task returned from<br/>
+		<p>A task that will be completed after block has run.
+If block returns a BFTask, then the task returned from
 this method will not be completed until that task is completed.</p>
 	</div>
 	
@@ -650,10 +620,10 @@ this method will not be completed until that task is completed.</p>
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Enqueues the given block to be run once this task is complete.<br/>
-This method uses a default execution strategy. The block will be<br/>
-run on the thread where the previous task completes, unless the<br/>
-the stack depth is too deep, in which case it will be run on a<br/>
+		<p>Enqueues the given block to be run once this task is complete.
+This method uses a default execution strategy. The block will be
+run on the thread where the previous task completes, unless the
+the stack depth is too deep, in which case it will be run on a
 dispatch queue with default priority.</p>
 	</div>
 	
@@ -683,7 +653,7 @@ dispatch queue with default priority.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (BFTask *)continueWithExecutor:(BFExecutor *)<em>executor</em> withBlock:(BFContinuationBlock)<em>block</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (instancetype)continueWithExecutor:(BFExecutor *)<em>executor</em> withBlock:(BFContinuationBlock)<em>block</em></code></div>
 
     
 	
@@ -692,7 +662,7 @@ dispatch queue with default priority.</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>executor</em></dt>
-			<dd><p>A BFExecutor responsible for determining how the<br/>
+			<dd><p>A BFExecutor responsible for determining how the
 continuation block will be run.</p></dd>
 		</dl>
 		
@@ -707,8 +677,8 @@ continuation block will be run.</p></dd>
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>A task that will be completed after block has run.<br/>
-If block returns a BFTask, then the task returned from<br/>
+		<p>A task that will be completed after block has run.
+If block returns a BFTask, then the task returned from
 this method will not be completed until that task is completed.</p>
 	</div>
 	
@@ -742,15 +712,15 @@ this method will not be completed until that task is completed.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Identical to continueWithExecutor:withBlock:, except that the block<br/>
-is only run if this task did not produce a cancellation, error, or<br/>
-exception. If it did, then the failure will be propagated to the<br/>
+		<p>Identical to continueWithExecutor:withBlock:, except that the block
+is only run if this task did not produce a cancellation, error, or
+exception. If it did, then the failure will be propagated to the
 returned task.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (BFTask *)continueWithExecutor:(BFExecutor *)<em>executor</em> withSuccessBlock:(BFContinuationBlock)<em>block</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (instancetype)continueWithExecutor:(BFExecutor *)<em>executor</em> withSuccessBlock:(BFContinuationBlock)<em>block</em></code></div>
 
     
 	
@@ -759,7 +729,7 @@ returned task.</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>executor</em></dt>
-			<dd><p>A BFExecutor responsible for determining how the<br/>
+			<dd><p>A BFExecutor responsible for determining how the
 continuation block will be run.</p></dd>
 		</dl>
 		
@@ -774,8 +744,8 @@ continuation block will be run.</p></dd>
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>A task that will be completed after block has run.<br/>
-If block returns a BFTask, then the task returned from<br/>
+		<p>A task that will be completed after block has run.
+If block returns a BFTask, then the task returned from
 this method will not be completed until that task is completed.</p>
 	</div>
 	
@@ -785,9 +755,9 @@ this method will not be completed until that task is completed.</p>
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Identical to continueWithExecutor:withBlock:, except that the block<br/>
-is only run if this task did not produce a cancellation, error, or<br/>
-exception. If it did, then the failure will be propagated to the<br/>
+		<p>Identical to continueWithExecutor:withBlock:, except that the block
+is only run if this task did not produce a cancellation, error, or
+exception. If it did, then the failure will be propagated to the
 returned task.</p>
 	</div>
 	
@@ -812,15 +782,15 @@ returned task.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Identical to continueWithBlock:, except that the block is only run<br/>
-if this task did not produce a cancellation, error, or exception.<br/>
-If it did, then the failure will be propagated to the returned<br/>
+		<p>Identical to continueWithBlock:, except that the block is only run
+if this task did not produce a cancellation, error, or exception.
+If it did, then the failure will be propagated to the returned
 task.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (BFTask *)continueWithSuccessBlock:(BFContinuationBlock)<em>block</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (instancetype)continueWithSuccessBlock:(BFContinuationBlock)<em>block</em></code></div>
 
     
 	
@@ -838,8 +808,8 @@ task.</p>
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>A task that will be completed after block has run.<br/>
-If block returns a BFTask, then the task returned from<br/>
+		<p>A task that will be completed after block has run.
+If block returns a BFTask, then the task returned from
 this method will not be completed until that task is completed.</p>
 	</div>
 	
@@ -849,9 +819,9 @@ this method will not be completed until that task is completed.</p>
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Identical to continueWithBlock:, except that the block is only run<br/>
-if this task did not produce a cancellation, error, or exception.<br/>
-If it did, then the failure will be propagated to the returned<br/>
+		<p>Identical to continueWithBlock:, except that the block is only run
+if this task did not produce a cancellation, error, or exception.
+If it did, then the failure will be propagated to the returned
 task.</p>
 	</div>
 	
@@ -1081,9 +1051,9 @@ task.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Waits until this operation is completed.<br/>
-This method is inefficient and consumes a thread resource while<br/>
-it&rsquo;s running. It should be avoided. This method logs a warning<br/>
+		<p>Waits until this operation is completed.
+This method is inefficient and consumes a thread resource while
+it&rsquo;s running. It should be avoided. This method logs a warning
 message if it is used on the main thread.</p>
 	</div>		
 	
@@ -1101,9 +1071,9 @@ message if it is used on the main thread.</p>
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Waits until this operation is completed.<br/>
-This method is inefficient and consumes a thread resource while<br/>
-it&rsquo;s running. It should be avoided. This method logs a warning<br/>
+		<p>Waits until this operation is completed.
+This method is inefficient and consumes a thread resource while
+it&rsquo;s running. It should be avoided. This method logs a warning
 message if it is used on the main thread.</p>
 	</div>
 	
@@ -1124,6 +1094,8 @@ message if it is used on the main thread.</p>
 					</div>
 					
 					
+                    
+                    
 				</div>
 				<div class="main-navigation navigation-bottom">
 					<ul>
@@ -1134,9 +1106,9 @@ message if it is used on the main thread.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2014 Parse Inc.. All rights reserved. (Last updated: 2014-01-28)</span><br />
+						<p><span class="copyright">&copy; 2014 Parse Inc.. All rights reserved. (Last updated: 2014-04-30)</span><br />
 						
-						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 961)</a>.</span></p>
 						
 					</div>
 				</div>
