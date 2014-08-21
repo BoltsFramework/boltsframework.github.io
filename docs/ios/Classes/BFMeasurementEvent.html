@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>BFAppLinkReturnToRefererControllerDelegate Protocol Reference</title>
+		<title>BFMeasurementEvent Class Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
@@ -16,7 +16,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">BFAppLinkReturnToRefererControllerDelegate Protocol Reference</h1>
+				<h1 class="hideInXcode">BFMeasurementEvent Class Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -31,21 +31,12 @@
 	
 	
 	
-	<option value="tasks">Tasks</option>
 	
 	
 	
 	
 	
 	
-	
-	
-	
-	<option value="instance_methods">Instance Methods</option>
-	
-	<option value="//api/name/returnToRefererController:didNavigateToAppLink:type:">&nbsp;&nbsp;&nbsp;&nbsp;- returnToRefererController:didNavigateToAppLink:type:</option>
-	
-	<option value="//api/name/returnToRefererController:willNavigateToAppLink:">&nbsp;&nbsp;&nbsp;&nbsp;- returnToRefererController:willNavigateToAppLink:</option>
 	
 	
 	
@@ -61,9 +52,6 @@
 
 
 
-<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
-	
-</ul></li>
 
 
 
@@ -71,22 +59,13 @@
 
 
 
-
-
-<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/returnToRefererController:didNavigateToAppLink:type:">returnToRefererController:didNavigateToAppLink:type:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/returnToRefererController:willNavigateToAppLink:">returnToRefererController:willNavigateToAppLink:</a></span></li>
-	
-</ul></li>
 
 
 			</ul>
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="BFAppLinkReturnToRefererControllerDelegate Protocol Reference" name="top"></a>
+				<a title="BFMeasurementEvent Class Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -95,18 +74,18 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">BFAppLinkReturnToRefererControllerDelegate Protocol Reference</h1>
+						<h1 class="title title-header">BFMeasurementEvent Class Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
-	<td class="specification-title">Conforms to</td>
+	<td class="specification-title">Inherits from</td>
 	<td class="specification-value">NSObject</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">BFAppLinkReturnToRefererController.h</td>
+	<td class="specification-value">BFMeasurementEvent.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -116,38 +95,8 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Protocol that a class can implement in order to be notified when the user has navigated back
-to the referer of an App Link.</p>
-					</div>
-					
-					
-					
-					
-					
-					<div class="section section-tasks">
-						<a title="Tasks" name="tasks"></a>
-						<h2 class="subtitle subtitle-tasks">Tasks</h2>
-						
-						
-						
-						
-
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/returnToRefererController:willNavigateToAppLink:">&ndash;&nbsp;returnToRefererController:willNavigateToAppLink:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/returnToRefererController:didNavigateToAppLink:type:">&ndash;&nbsp;returnToRefererController:didNavigateToAppLink:type:</a></code>
-	</span>
-	
-	
-</li>
-						</ul>
-						
+						<p>The event raised when the user navigates out from your app and back to the referrer app.
+e.g when the user leaves your app after tapping the back-to-referrer navigation bar</p>
 					</div>
 					
 					
@@ -158,95 +107,9 @@ to the referer of an App Link.</p>
 					
 					
 					
-					<div class="section section-methods">
-						<a title="Instance Methods" name="instance_methods"></a>
-						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
-						
-						<div class="section-method">
-	<a name="//api/name/returnToRefererController:didNavigateToAppLink:type:" title="returnToRefererController:didNavigateToAppLink:type:"></a>
-	<h3 class="subsubtitle method-title">returnToRefererController:didNavigateToAppLink:type:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Called after the navigation has been attempted, with an indication of whether the referer
-app link was successfully opened.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (void)returnToRefererController:(id)<em>controller</em> didNavigateToAppLink:(id)<em>url</em> type:(id)<em>type</em></code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>Called after the navigation has been attempted, with an indication of whether the referer
-app link was successfully opened.</p>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">BFAppLinkReturnToRefererController.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/returnToRefererController:willNavigateToAppLink:" title="returnToRefererController:willNavigateToAppLink:"></a>
-	<h3 class="subsubtitle method-title">returnToRefererController:willNavigateToAppLink:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Called when the user has tapped to navigate, but before the navigation has been performed.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (void)returnToRefererController:(id)<em>controller</em> willNavigateToAppLink:(id)<em>appLink</em></code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>Called when the user has tapped to navigate, but before the navigation has been performed.</p>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">BFAppLinkReturnToRefererController.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-					</div>
+					
+					
+					
 					
 					
                     

@@ -286,7 +286,7 @@ creating BFAppLinkNavigations themselves.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (readonly, strong) BFAppLink *appLink</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) BFAppLink *appLink</code></div>
 
     
 	
@@ -329,7 +329,7 @@ in routing and handling an App Link request.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (readonly, strong) NSDictionary *appLinkData</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy, readonly) NSDictionary *appLinkData</code></div>
 
     
 	
@@ -374,7 +374,7 @@ other such metadata relevant on this device.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (readonly, strong) NSDictionary *extras</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy, readonly) NSDictionary *extras</code></div>
 
     
 	
@@ -468,7 +468,7 @@ a basic, built-in resolver will be used.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (BFAppLinkNavigationType)navigateToAppLink:(BFAppLink *)<em>link</em> error:(NSError **)<em>error</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (BFAppLinkNavigationType)navigateToAppLink:(id)<em>link</em> error:(id)<em>error</em></code></div>
 
     
 	
@@ -509,7 +509,7 @@ a basic, built-in resolver will be used.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (BFTask *)navigateToURLInBackground:(NSURL *)<em>destination</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (BFTask *)navigateToURLInBackground:(id)<em>destination</em></code></div>
 
     
 	
@@ -551,7 +551,7 @@ strategy and returns a BFNavigationType</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (BFTask *)navigateToURLInBackground:(NSURL *)<em>destination</em> resolver:(id&lt;BFAppLinkResolving&gt;)<em>resolver</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (BFTask *)navigateToURLInBackground:(id)<em>destination</em> resolver:(id)<em>resolver</em></code></div>
 
     
 	
@@ -593,7 +593,7 @@ strategy and returns a BFNavigationType</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (instancetype)navigationWithAppLink:(BFAppLink *)<em>appLink</em> extras:(NSDictionary *)<em>extras</em> appLinkData:(NSDictionary *)<em>appLinkData</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (instancetype)navigationWithAppLink:(id)<em>appLink</em> extras:(id)<em>extras</em> appLinkData:(id)<em>appLinkData</em></code></div>
 
     
 	
@@ -634,7 +634,7 @@ strategy and returns a BFNavigationType</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (BFTask *)resolveAppLinkInBackground:(NSURL *)<em>destination</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (BFTask *)resolveAppLinkInBackground:(id)<em>destination</em></code></div>
 
     
 	
@@ -675,7 +675,7 @@ strategy and returns a BFNavigationType</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (BFTask *)resolveAppLinkInBackground:(NSURL *)<em>destination</em> resolver:(id&lt;BFAppLinkResolving&gt;)<em>resolver</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (BFTask *)resolveAppLinkInBackground:(id)<em>destination</em> resolver:(id)<em>resolver</em></code></div>
 
     
 	
@@ -717,7 +717,7 @@ default resolver to the basic, built-in resolver provided by Bolts.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (void)setDefaultResolver:(id&lt;BFAppLinkResolving&gt;)<em>resolver</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (void)setDefaultResolver:(id)<em>resolver</em></code></div>
 
     
 	
@@ -767,7 +767,7 @@ default resolver to the basic, built-in resolver provided by Bolts.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (BFAppLinkNavigationType)navigate:(NSError **)<em>error</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (BFAppLinkNavigationType)navigate:(id)<em>error</em></code></div>
 
     
 	
@@ -801,6 +801,9 @@ default resolver to the basic, built-in resolver provided by Bolts.</p>
 					
                     
                     
+                    
+                    
+
 				</div>
 				<div class="main-navigation navigation-bottom">
 					<ul>
@@ -811,7 +814,7 @@ default resolver to the basic, built-in resolver provided by Bolts.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2014 Parse Inc.. All rights reserved. (Last updated: 2014-08-06)</span><br />
+						<p><span class="copyright">&copy; 2014 Parse Inc.. All rights reserved. (Last updated: 2014-08-20)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						

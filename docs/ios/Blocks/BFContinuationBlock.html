@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>BFAppLinkResolving Protocol Reference</title>
+		<title>BFContinuationBlock Block Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
@@ -16,7 +16,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">BFAppLinkResolving Protocol Reference</h1>
+				<h1 class="hideInXcode">BFContinuationBlock Block Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -26,24 +26,7 @@
 					<select id="jumpTo">
 	<option value="top">Jump To&#133;</option>
 	
-	<option value="overview">Overview</option>
 	
-	
-	
-	
-	<option value="tasks">Tasks</option>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<option value="instance_methods">Instance Methods</option>
-	
-	<option value="//api/name/appLinkFromURLInBackground:">&nbsp;&nbsp;&nbsp;&nbsp;- appLinkFromURLInBackground:</option>
 	
 	
 	
@@ -54,35 +37,15 @@
 		<nav id="tocContainer" class="isShowingTOC">
 			<ul id="toc" role="tree">
 				
-<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
 
 
-
-
-<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
-	
-</ul></li>
-
-
-
-
-
-
-
-
-
-<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/appLinkFromURLInBackground:">appLinkFromURLInBackground:</a></span></li>
-	
-</ul></li>
 
 
 			</ul>
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="BFAppLinkResolving Protocol Reference" name="top"></a>
+				<a title="BFContinuationBlock Block Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -91,130 +54,62 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">BFAppLinkResolving Protocol Reference</h1>
+						<h1 class="title title-header">BFContinuationBlock Block Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
-	<td class="specification-title">Conforms to</td>
-	<td class="specification-value">NSObject</td>
-</tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">BFAppLinkResolving.h</td>
+	<td class="specification-value">BFTask.h</td>
 </tr>
 						</tbody></table></div>
 					
                     
                     
 					
-					<div class="section section-overview">
-						<a title="Overview" name="overview"></a>
-						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Implement this protocol to provide an alternate strategy for resolving
-App Links that may include pre-fetching, caching, or querying for App Link
-data from an index provided by a service provider.</p>
-					</div>
 					
 					
 					
-					
-					
-					<div class="section section-tasks">
-						<a title="Tasks" name="tasks"></a>
-						<h2 class="subtitle subtitle-tasks">Tasks</h2>
-						
-						
-						
-						
+                    
+                    
+                    
+                    
+                    <a title="Block Definition" name="instance_methods"></a>
+                    <h2 class="subtitle subtitle-methods">Block Definition</h2>
+                    <h3 class="subsubtitle method-title">BFContinuationBlock</h3>
 
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/appLinkFromURLInBackground:">&ndash;&nbsp;appLinkFromURLInBackground:</a></code>
-	</span>
-	
-	<span class="task-item-suffix">required method</span>
-</li>
-						</ul>
-						
-					</div>
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					<div class="section section-methods">
-						<a title="Instance Methods" name="instance_methods"></a>
-						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
-						
-						<div class="section-method">
-	<a name="//api/name/appLinkFromURLInBackground:" title="appLinkFromURLInBackground:"></a>
-	<h3 class="subsubtitle method-title">appLinkFromURLInBackground:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Asynchronously resolves App Link data for a given URL.</p>
-	</div>		
-	
-    
 
-	<div class="method-subsection method-declaration"><code>- (BFTask *)appLinkFromURLInBackground:(id)<em>url</em></code></div>
-
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>url</em></dt>
-			<dd><p>The URL to resolve into an App Link.</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>A BFTask that will return a BFAppLink for the given URL.</p>
-	</div>
-	
-	
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>Asynchronously resolves App Link data for a given URL.</p>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">BFAppLinkResolving.h</code><br />
-	</div>				
-	
-	
+<div class="method-subsection brief-description">
+    <p>A block that can act as a continuation for a task.</p>
 </div>
-						
-					</div>
-					
-					
-                    
-                    
-                    
+
+
+
+<code>typedef id (^BFContinuationBlock) (BFTask *task)</code>
+
+
+
+<div class="method-subsection discussion-section">
+    <h4 class="method-subtitle">Discussion</h4>
+    <p>A block that can act as a continuation for a task.</p>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="method-subsection declared-in-section">
+    <h4 class="method-subtitle">Declared In</h4>
+    <code class="declared-in-ref">BFTask.h</code><br />
+</div>
+
+
                     
 
 				</div>

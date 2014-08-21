@@ -58,6 +58,8 @@
 	
 	<option value="class_methods">Class Methods</option>
 	
+	<option value="//api/name/URLWithInboundURL:sourceApplication:">&nbsp;&nbsp;&nbsp;&nbsp;+ URLWithInboundURL:sourceApplication:</option>
+	
 	<option value="//api/name/URLWithURL:">&nbsp;&nbsp;&nbsp;&nbsp;+ URLWithURL:</option>
 	
 	
@@ -105,6 +107,8 @@
 
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/URLWithInboundURL:sourceApplication:">URLWithInboundURL:sourceApplication:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/URLWithURL:">URLWithURL:</a></span></li>
 	
@@ -167,6 +171,12 @@ and handling for App Link requests.</p>
 							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/URLWithURL:">+&nbsp;URLWithURL:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/URLWithInboundURL:sourceApplication:">+&nbsp;URLWithInboundURL:sourceApplication:</a></code>
 	</span>
 	
 	
@@ -238,7 +248,7 @@ Otherwise, it is nil.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (readonly, strong) NSDictionary *appLinkData</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSDictionary *appLinkData</code></div>
 
     
 	
@@ -280,7 +290,7 @@ Otherwise, it is nil.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (readonly, strong) NSDictionary *appLinkExtras</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSDictionary *appLinkExtras</code></div>
 
     
 	
@@ -321,7 +331,7 @@ Otherwise, it is nil.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (readonly, strong) BFAppLink *appLinkReferer</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) BFAppLink *appLinkReferer</code></div>
 
     
 	
@@ -362,7 +372,7 @@ Otherwise, it is nil.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (readonly, strong) NSDictionary *inputQueryParameters</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSDictionary *inputQueryParameters</code></div>
 
     
 	
@@ -403,7 +413,7 @@ Otherwise, it is nil.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (readonly, strong) NSURL *inputURL</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSURL *inputURL</code></div>
 
     
 	
@@ -444,7 +454,7 @@ Otherwise, it is nil.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (readonly, strong) NSDictionary *targetQueryParameters</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSDictionary *targetQueryParameters</code></div>
 
     
 	
@@ -486,7 +496,7 @@ Otherwise, it is the url that created the target.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (readonly, strong) NSURL *targetURL</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSURL *targetURL</code></div>
 
     
 	
@@ -525,21 +535,36 @@ Otherwise, it is the url that created the target.</p>
 						<h2 class="subtitle subtitle-methods">Class Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/URLWithURL:" title="URLWithURL:"></a>
-	<h3 class="subsubtitle method-title">URLWithURL:</h3>
+	<a name="//api/name/URLWithInboundURL:sourceApplication:" title="URLWithInboundURL:sourceApplication:"></a>
+	<h3 class="subsubtitle method-title">URLWithInboundURL:sourceApplication:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Creates a link target from a raw URL. Usually, this will be used to parse a URL passed into
-an app delegate&rsquo;s handleOpenURL: method.</p>
+		<p>Creates a link target from a raw URL received from an external application. This is typically called from the app delegate&rsquo;s
+application:openURL:sourceApplication:annotation: and will post the BFAppLinkNavigateInEventName measurement event.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (BFURL *)URLWithURL:(NSURL *)<em>url</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (BFURL *)URLWithInboundURL:(id)<em>url</em> sourceApplication:(id)<em>sourceApplication</em></code></div>
 
     
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>url</em></dt>
+			<dd><p>The instance of <code>NSURL</code> to create BFURL from.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>sourceApplication</em></dt>
+			<dd><p>the bundle ID of the app that is requesting your app to open the URL. The same sourceApplication in application:openURL:sourceApplication:annotation:</p></dd>
+		</dl>
+		
+	</div>
 	
 	
 	
@@ -549,8 +574,65 @@ an app delegate&rsquo;s handleOpenURL: method.</p>
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Creates a link target from a raw URL. Usually, this will be used to parse a URL passed into
-an app delegate&rsquo;s handleOpenURL: method.</p>
+		<p>Creates a link target from a raw URL received from an external application. This is typically called from the app delegate&rsquo;s
+application:openURL:sourceApplication:annotation: and will post the BFAppLinkNavigateInEventName measurement event.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">BFURL.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/URLWithURL:" title="URLWithURL:"></a>
+	<h3 class="subsubtitle method-title">URLWithURL:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a link target from a raw URL.
+On success, this posts the BFAppLinkParseEventName measurement event. If you are constructing the BFURL within your application delegate&rsquo;s
+application:openURL:sourceApplication:annotation:, you should instead use URLWithInboundURL:sourceApplication:
+to support better BFMeasurementEvent notifications</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (BFURL *)URLWithURL:(id)<em>url</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>url</em></dt>
+			<dd><p>The instance of <code>NSURL</code> to create BFURL from.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Creates a link target from a raw URL.
+On success, this posts the BFAppLinkParseEventName measurement event. If you are constructing the BFURL within your application delegate&rsquo;s
+application:openURL:sourceApplication:annotation:, you should instead use URLWithInboundURL:sourceApplication:
+to support better BFMeasurementEvent notifications</p>
 	</div>
 	
 	
@@ -574,6 +656,9 @@ an app delegate&rsquo;s handleOpenURL: method.</p>
 					
                     
                     
+                    
+                    
+
 				</div>
 				<div class="main-navigation navigation-bottom">
 					<ul>
@@ -584,7 +669,7 @@ an app delegate&rsquo;s handleOpenURL: method.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2014 Parse Inc.. All rights reserved. (Last updated: 2014-08-06)</span><br />
+						<p><span class="copyright">&copy; 2014 Parse Inc.. All rights reserved. (Last updated: 2014-08-20)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						
